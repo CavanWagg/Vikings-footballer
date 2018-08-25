@@ -1,20 +1,27 @@
 # University of Minnesota Bootcamp
 
 ## Project # 2
-### Home Screen
+
+Home Screen
+
 ![Screenshot](https://cl.ly/469f32544d7a/Image%2525202018-08-25%252520at%2525209.33.01%252520AM.png)
 
-### Select a Team
+Select a Team
+
 ![Screenshot](https://cl.ly/5d9c09f2ccb1/Image%2525202018-08-25%252520at%2525209.43.34%252520AM.png)
 
-### Select Run or Pass to Move down the field and score
-A run will usually lead to less yards but is less likely to lead to a turnover. Pass is higher risk, higher reward
+Select Run or Pass to Move down the field and score
+
+A run will usually lead to less yards but is less likely to lead to a turnover. Pass is higher risk, higher reward.
+
 ![Screenshot](https://cl.ly/6a83fbe7fb28/Image%2525202018-08-25%252520at%2525209.45.32%252520AM.png)
 
-### When time runs out, you can input your name to see if you made it on the leaderboard
+When time runs out, you can input your name to see if you made it on the leaderboard
+
 ![Screenshot](https://cl.ly/f8720534a843/Image%2525202018-08-25%252520at%2525209.48.54%252520AM.png)
 
-### Leaderboard
+Leaderboard
+
 ![Screenshot](https://cl.ly/eb0ec898de26/Image%2525202018-08-25%252520at%2525209.51.16%252520AM.png)
 
 ### Demo
