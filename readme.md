@@ -2,8 +2,6 @@
 
 ## Project # 2
 
-## Description 
-Footballer Is a full-stack application backend utilizing Node.js,Express, Sequelize, and Handebars. Play as the Vikings and run or pass your way to victory. Choose an NFL team to play against. The game uses real NFL team offense and defense stats paired with probability functions to determine the outcome of the play. Score big and reach legendary status by making it on the leaderboard.
 
 ## Demo
 
