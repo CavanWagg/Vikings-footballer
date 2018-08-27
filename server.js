@@ -1,12 +1,12 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-
+const express = require("express");  
+const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars"); 
 
 const db = require("./models");
  
-var app = express(); 
+const app = express(); 
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-var exphbs = require("express-handlebars");
+
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -22,11 +22,11 @@ app.set("view engine", "handlebars");
 require("./controllers/nfl.js")(app);
 
 
-db.sequelize.sync({ force: false }).then(function() {
-  app.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:" + PORT);
+db.sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server listening on: http://localhost:${  PORT}`);
     });
 
 })
 
-//add something for heroku to push
+// add something for heroku to push

@@ -1,33 +1,33 @@
-let assert = require('chai').assert;
-let expect = require('chai').expect;
-let nfl = require('../public/assets/js/test.js');
+const assert = require('chai').assert;
+const expect = require('chai').expect;  
+const nfl = require('../public/assets/js/test.js');
 
 // ======================================CHECK PASS PLAY==================================
 
 // describe('Check pass plays', function(){
    
     // CHECKING INCOMPLETE PASSES
-    it.skip('check if the passYardage for incomplete pass is zero', function(){
+    it.skip('check if the passYardage for incomplete pass is zero', () => {
 
         // STORING THE INCOMPLETEPASS IN PLAY
-        let totalYardage = nfl.incompletePass();
+        const totalYardage = nfl.incompletePass();
 
         // EXPECTING TOTAL YARDAGE EQUALS TO O
         assert.equal(totalYardage, 0);
     });
 
      // CHECKING YARD LOSS
-    it.skip('Check yard loss', function(){
+    it.skip('Check yard loss', () => {
 
        // STORING THE BIGDEFPLAY IN PLAY
-        let play = nfl.bigDefPlay()
+        const play = nfl.bigDefPlay()
 
         // PASS YARDAGE
-        var PassYardage = nfl.passYardage
-        , lossYard = function (){
-            PassYardage -= nfl.roundedYards;
+        let PassYardage = nfl.passYardage
+        ; const lossYard = function (){ 
+            PassYardage -= nfl.roundedYards; 
         }
-        , yardLoss = function (){
+        ; const yardLoss = function (){
             return  PassYardage;
         };
 
@@ -36,17 +36,17 @@ let nfl = require('../public/assets/js/test.js');
     });
 
     // CHECKING THE NORAML PASS
-    it.skip('Check normal', function(){
+    it.skip('Check normal', () => {
 
        // STORING THE BIGDEFPLAY IN PLAY
-        let play = nfl.normalPass()
+        const play = nfl.normalPass()
 
         // PASS YARADAGE
-        var PassYardage = nfl.passYardage
-        , gainedYard = function (){
+        let PassYardage = nfl.passYardage
+        ; const gainedYard = function (){
             PassYardage += nfl.roundedYards;
         }
-        , yardgained = function (){
+        ; const yardgained = function (){
             return  PassYardage;
         };
 
@@ -55,17 +55,17 @@ let nfl = require('../public/assets/js/test.js');
     });
 
     // CHECKING THE BIG PASS PLAY
-    it.skip('Check Big Pass Play ', function(){
+    it.skip('Check Big Pass Play ', () => { 
 
         // STORING THE BIGPASSPLAY IN PLAY
-        let play = nfl.bigPassPlay()
+        const play = nfl.bigPassPlay()
 
         // PASSYARDAGE
-        var PassYardage = nfl.passYardage
-        , gainedYard = function (){
+        let PassYardage = nfl.passYardage
+        ; const gainedYard = function (){
             PassYardage += nfl.roundedYards;
         }
-        , yardgained = function (){
+        ; const yardgained = function (){
             return  PassYardage;
         };
 
@@ -78,23 +78,23 @@ let nfl = require('../public/assets/js/test.js');
 
 
 
-//======================================= RUN PLAYS=============================
+//= ====================================== RUN PLAYS=============================
 
 
-describe('Check run plays', function(){
+describe('Check run plays', () => { 
 
     // CHECK NORMAL RUN
-    it('Check normal run', function(){
+    it('Check normal run', () => {
 
         // STORING THE NORMALRUN IN PLAY
-        let play = nfl.normalRun()
+        const play = nfl.normalRun()
 
         // RUNYARDAGE
         let runYardage = nfl.runYardage
-        , gainedYard = function (){
+        ; const gainedYard = function (){
             runYardage += nfl.roundedYards;
         }
-        , yardgained = function (){
+        ; const yardgained = function (){
             return  runYardage;
         };
 
@@ -102,18 +102,18 @@ describe('Check run plays', function(){
         expect(gainedYard).to.increases(yardgained).by(nfl.roundedYards)
     });
 
-    //CHECKING THE BIG RUN PLAY
-    it('Check big run play', function(){
+    // CHECKING THE BIG RUN PLAY
+    it('Check big run play', () => {
 
         // STORING THE BIGRUNPLAY IN PLAY
-        let play = nfl.bigRunPlay()
+        const play = nfl.bigRunPlay()
 
         // RUNYARDAGE
-        var runYardage = nfl.runYardage
-        , gainedYard = function (){
+        let runYardage = nfl.runYardage
+        ; const gainedYard = function (){
             runYardage += nfl.roundedYards;
         }
-        , yardgained = function (){
+        ; const yardgained = function (){
             return  runYardage;
         };
 
@@ -121,18 +121,18 @@ describe('Check run plays', function(){
         expect(gainedYard).to.increases(yardgained).by(nfl.roundedYards)
     });
     
-    //CHECKING THE YARD LOSS
-    it.only('Check yard loss', function(){
+    // CHECKING THE YARD LOSS
+    it.only('Check yard loss', () => {
 
         // STORING THE LOSS IN PLAY
-        let play = nfl.bigDefPlay()
+        const play = nfl.bigDefPlay()
 
         // RUN YARDAGE
-        var runYardage = nfl.runYardage
-        , gainedYard = function (){
+        let runYardage = nfl.runYardage
+        ; const gainedYard = function (){
             runYardage -= nfl.roundedYards;
         }
-        , yardgained = function (){
+        ; const yardgained = function (){
             return  runYardage;
         };
 
