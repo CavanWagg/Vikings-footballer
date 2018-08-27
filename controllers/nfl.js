@@ -4,34 +4,34 @@
 
 // var path = require("path");
 // Import model to use its databse functions
-var db = require("../models");
-var Sequelize = require("sequelize");
-var express = require("express");
+const Sequelize = require("sequelize");  
+const express = require("express");
+const db = require("../models"); 
 
 module.exports = function(app) {
 
 
 // * Get all teams
-    app.get("/", function(req, res){
+    app.get("/", (req, res) => {
         // the actual functionality of the app
         res.render("index");
     })
 
-    app.get("/game", function(req, res){
+    app.get("/game", (req, res) => {
         db.teams.findAll({
             // attributes: ['team_name']
         })
-        .then(function(data) {  
-            var teamsObject = {
+        .then((data) => {  
+            const teamsObject = {
                 teams: data
             };
-            //console.log('teamsObject', teamsObject);
+            // console.log('teamsObject', teamsObject);
             // eventually render this info
             res.render("game", teamsObject)
         });
     });
 
-    app.get("/about", function(req, res){
+    app.get("/about", (req, res) => {
         // the actual functionality of the app
         res.render("about");
     })
@@ -44,30 +44,30 @@ module.exports = function(app) {
 
 
 // * Get all user data
-    app.get("/user", function(req, res){
+    app.get("/user", (req, res) => { 
         db.user.findAll({})
-        .then(function(dbUser) {  
+        .then((dbUser) => {  
             res.json(dbUser);
         });
     });
 
 
     // * Get top 10 scores 
-    app.get("/leaderboard", function(req, res){
+    app.get("/leaderboard", (req, res) => {
         // a leaderboard of all the high scores
         db.user.findAll({ limit: 10, order: [['points', 'DESC'],],})
-        .then(function(top) {  
-            //console.log(top);
-            var userobj = {
+        .then((top) => {  
+            // console.log(top);
+            const userobj = {
                 users : top
             };
-            //console.log(userobj);
+            // console.log(userobj);
             res.render("leaderboard", userobj)
     });
 
 });
     // * Post new User to user table
-    app.post("/api/users", function(req, res){
+    app.post("/api/users", (req, res) => {
         console.log(req.body);
         db.user.create({
             username: req.body.username,
@@ -75,7 +75,7 @@ module.exports = function(app) {
             points: req.body.points,
             yards: req.body.yards
         })
-        .then(function(dbPost) { 
+        .then((dbPost) => { 
             console.log('redirect???');
             // res.json(dbPost);
             // redirect to leaderboard

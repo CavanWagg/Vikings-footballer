@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const expect = require('chai').expect;  
+const expect = require('chai').expect;    
 const nfl = require('../public/assets/js/test.js');
 
 // ======================================CHECK PASS PLAY==================================
@@ -90,7 +90,7 @@ describe('Check run plays', () => {
         const play = nfl.normalRun()
 
         // RUNYARDAGE
-        let runYardage = nfl.runYardage
+        let runYardage = nfl.runYardage 
         ; const gainedYard = function (){
             runYardage += nfl.roundedYards;
         }
@@ -109,7 +109,7 @@ describe('Check run plays', () => {
         const play = nfl.bigRunPlay()
 
         // RUNYARDAGE
-        let runYardage = nfl.runYardage
+        let runYardage = nfl.runYardage 
         ; const gainedYard = function (){
             runYardage += nfl.roundedYards;
         }
